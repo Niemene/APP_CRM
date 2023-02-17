@@ -38,6 +38,8 @@ dependencies:
   led_bulb_indicator: ^0.0.1
   curved_navigation_bar: ^1.0.3
   flutter_dotenv: ^5.0.2
+  flutter_email_sender: ^5.2.0
+  flutter_inappwebview: ^5.7.2+3
 
 dev_dependencies:
   flutter_test:

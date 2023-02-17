@@ -83,7 +83,7 @@ class _authScreenState extends State<authScreen> {
 
         for (var contract in utente.contracts) {
           for (var service in contract.services) {
-            await service.fetchDevices();
+             // await service.fetchDevices();
           }
         }
         Future.delayed(const Duration(seconds: 8), () {

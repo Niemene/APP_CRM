@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:new_app_wfn/fragment/assistant_fragment.dart';
 import 'package:new_app_wfn/main.dart';
 import 'package:new_app_wfn/utils/customShape.dart';
+import '../fragment/chat_fragment.dart';
 import '../fragment/home_fragment.dart';
 import '../fragment/invoices_fragment.dart';
 import '../fragment/offers_fragment.dart';
@@ -20,6 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final fragment = [
     HomeFragment(contracts: utente.contracts),
     Profile(),
+    MyChatbotScreen(),
     Invoices(),
     Offers(),
   ];
@@ -38,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
         toolbarHeight: 100,
         automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
-        elevation: 0.0,
+        elevation: 0,
         flexibleSpace: ClipPath(
           clipper: AppBarShape(),
           child:Container(
@@ -46,14 +49,14 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Center(
               child: Image.asset(
               "./asset/logo.png",
-              scale: 5,
+              scale: 4,
           ),
             ),
           )
         ),
       ),
       body: fragment[currentIndex],
-      bottomNavigationBar: 
+      bottomNavigationBar:
       CurvedNavigationBar(
         index: currentIndex,
         height: 50.0,
@@ -61,9 +64,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
           Icon(Icons.home, size: 30, shadows: <Shadow>[Shadow(color: Colors.teal, blurRadius: 2.0)],),
           Icon(Icons.person, size: 30),
+          Icon(Icons.assistant, size: 30),
           Icon(Icons.payment, size: 30),
           Icon(Icons.local_offer_sharp, size: 30),
-          
+
         ],
         color: Colors.white,
         buttonBackgroundColor: Colors.white,

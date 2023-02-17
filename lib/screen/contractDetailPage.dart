@@ -27,8 +27,8 @@ class ContractDetailPage extends StatelessWidget {
             )),
       ),
       body: SingleChildScrollView(
-        
         child:(
+
           Column(
           children:[
            const Divider(
@@ -38,6 +38,7 @@ class ContractDetailPage extends StatelessWidget {
               indent: 10,
               endIndent: 10,
             ),
+
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: const <Widget>[
@@ -52,7 +53,6 @@ class ContractDetailPage extends StatelessWidget {
                 ),
               ],
             ),
-           
             Container(
               height: 160,
               child: ListView.builder(
@@ -63,7 +63,7 @@ class ContractDetailPage extends StatelessWidget {
                     onTap: () => _onServiceTapped(context, index),
                     child: Card(
                       margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                      color: Colors.teal[200],
+                      color: Colors.teal[400],
                       child: ListTile(
                         dense: true,
                         title: Text(service.description),
@@ -78,7 +78,7 @@ class ContractDetailPage extends StatelessWidget {
                 },
               ),
             ),
-           const Divider(
+            Divider(
               height: 5,
               color: Colors.teal,
               thickness: 1,
@@ -105,6 +105,7 @@ class ContractDetailPage extends StatelessWidget {
                   itemCount: utente.invoiceEntry.length,
                   itemBuilder: (context, index) {
                     return Card(
+
                       margin: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                       child: ListTile(
                         dense: true,
@@ -154,19 +155,22 @@ class ContractDetailPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                   Card(
-                    color: Colors.teal,
+                    color: Colors.transparent,
+                      elevation: 0,
                       child: Center(
                         child: Icon(Icons.picture_as_pdf, size: 50),
                       )
                   ),
                     Card(
-                      color: Colors.teal,
+                        color: Colors.transparent,
+                        elevation: 0,
                       child: const Center(
                         child: Icon(Icons.report_problem_outlined, size: 50),
                       )
                   ),
                    Card(
-                      color: Colors.teal,
+                       color: Colors.transparent,
+                       elevation: 0,
                       child: const Center(
                         child: Icon(Icons.report_problem_outlined, size: 50),
                       )

@@ -115,7 +115,7 @@ class HomeFragment extends StatelessWidget {
                     ListView.builder(
                       padding: const EdgeInsets.all(5),
                       shrinkWrap: true,
-                      itemCount: 2,
+                      itemCount: 0,
                       itemBuilder: (context, index) {
                         return InkWell(
                           child: Card(
@@ -203,7 +203,7 @@ class HomeFragment extends StatelessWidget {
                     ListView.builder(
                       padding: const EdgeInsets.all(5),
                       shrinkWrap: true,
-                      itemCount: 1,
+                      itemCount: 0,
                       itemBuilder: (context, index) {
                         return InkWell(
                           child: Card(
